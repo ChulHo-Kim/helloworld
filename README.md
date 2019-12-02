@@ -1,3 +1,3 @@
 # kch_sample
 
-2
+3
