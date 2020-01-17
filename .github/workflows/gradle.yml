@@ -15,6 +15,9 @@ jobs:
         java-version: 11
     - name: Build with Gradle
       run: ./gradlew build
+    
+    - name: check build file
+      run: ls -al
       
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
