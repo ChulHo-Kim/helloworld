@@ -15,3 +15,12 @@ jobs:
         java-version: 11
     - name: Build with Gradle
       run: ./gradlew build
+     - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "build/libs/helloworld-demo.jar"
+        target: "./"
