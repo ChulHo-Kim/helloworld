@@ -26,5 +26,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "build/libs/helloworld-demo.jar"
+        source: "build/libs/helloworld-demo.war"
         target: "./"
