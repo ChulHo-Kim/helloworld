@@ -29,5 +29,5 @@ jobs:
         source: "build/libs/helloworld-demo.war"
         target: "/tomcat9/webapps"
   
-    - name: check build file
+    - name: was restart
       run: /tomcat9/bin/shutdown.sh && /tomcat9/bin/startup.sh
