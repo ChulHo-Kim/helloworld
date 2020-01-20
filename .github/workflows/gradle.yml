@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew bootjar
     
     - name: check build file
       run: ls -al build/libs
