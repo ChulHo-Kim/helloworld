@@ -27,9 +27,18 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "build/libs/helloworld-demo.war"
-        target: "/tomcat9/webapps"
+        target: "./"
+        
+    - name: remote server move war file
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: mv build/libs/helloworld-demo.war /tomcat9/webapps/
   
-    - name: executing remote ssh commands using password
+    - name: remote server was restart
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
