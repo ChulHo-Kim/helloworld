@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Gradle
-      run: ./gradlew bootjar
+      run: ./gradlew build
     
     - name: check build file
       run: ls -al build/libs
@@ -26,5 +26,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "build/libs/helloworld-demo.jar"
-        target: "./"
+        source: "build/libs/helloworld-demo.war"
+        target: "/tomcat9/webapps"
+  
+    - name: check build file
+      run: /tomcat9/bin/shutdown.sh && /tomcat9/bin/startup.sh
