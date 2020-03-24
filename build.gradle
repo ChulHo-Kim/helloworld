@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'tangunsoft'
-version = 'demo'
+version = ''
 sourceCompatibility = '11'
 
 repositories {
