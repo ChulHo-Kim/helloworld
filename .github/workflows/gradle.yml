@@ -36,7 +36,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: mv build/libs/helloworld-demo.war /tomcat9/webapps/
+        script: mv build/libs/helloworld-demo.war /tomcat_github_action/webapps/
   
     - name: remote server was restart
       uses: appleboy/ssh-action@master
