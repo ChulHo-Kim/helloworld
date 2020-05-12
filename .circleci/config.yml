@@ -55,7 +55,7 @@ jobs:
           path: /home/circleci/project/build/libs
       - deploy:
           name: Deploy Over SSH
-          command: "scp -o StrictHostKeyChecking=no -r /home/circleci/project/build/libs/* isb@52.141.1.94:/circleci_artifact"
+          command: "scp -o StrictHostKeyChecking=no -r /home/circleci/project/build/libs/* isb@20.41.96.207:/circleci_artifact"
           
 workflows:
   version: 2
