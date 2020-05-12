@@ -13,7 +13,7 @@ public class SampleController {
     @ResponseBody
     public String sampleHome() {
 
-        return "Hello GitHub Action~!! Hello Tangunsoft~!!!!!";
+        return "Hello Tangunsoft.";
 
     }
 }
