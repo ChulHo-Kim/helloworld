@@ -56,7 +56,7 @@ jobs:
       - deploy:
           name: Deploy Over SSH
           command: "scp -o StrictHostKeyChecking=no -r /home/circleci/project/build/libs/* isb@20.41.96.207:/tomcat/webapps"
-      - was_restart:
+      - deploy:
           name: Tomcat Restart
           command: "ssh isb@20.41.96.207 /tomcat/bin/startup.sh"
           
